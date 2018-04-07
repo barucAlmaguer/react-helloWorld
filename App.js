@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, TextInput, View } from 'react-native';
 
-export default class PizzaTranslator extends Component {
+export default class TurtleTranslator extends Component {
   constructor(props) {
     super(props);
     this.state = { text: '' };
@@ -16,7 +16,7 @@ export default class PizzaTranslator extends Component {
           onChangeText={(text) => this.setState({ text })}
         />
         <Text style={{ padding: 10, fontSize: 42 }}>
-          {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
+          {this.state.text.split(' ').map((word) => word && '🐢').join(' ')}
         </Text>
       </View>
     );
@@ -24,4 +24,4 @@ export default class PizzaTranslator extends Component {
 }
 
 // skip this line if using Create React Native App
-AppRegistry.registerComponent('AwesomeProject', () => PizzaTranslator);
+AppRegistry.registerComponent('AwesomeProject', () => TurtleTranslator);
