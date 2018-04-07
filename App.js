@@ -11,7 +11,7 @@ class Blink extends Component {
       this.setState(previousState => {
         return { isShowingText: !previousState.isShowingText };
       });
-    }, 1000);
+    }, this.props.interval);
   }
 
   render() {
@@ -26,10 +26,10 @@ export default class BlinkApp extends Component {
   render() {
     return (
       <View>
-        <Blink text='I love to blink' />
-        <Blink text='Yes blinking is so great' />
-        <Blink text='Why did they ever take this out of HTML' />
-        <Blink text='Look at me look at me look at me' />
+        <Blink interval={1000} text='I love to blink' />
+        <Blink interval={1500} text='Yes blinking is so great' />
+        <Blink interval={1750} text='Why did they ever take this out of HTML' />
+        <Blink interval={2000} text='Look at me look at me look at me' />
       </View>
     );
   }
