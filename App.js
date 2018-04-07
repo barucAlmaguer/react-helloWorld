@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, View } from 'react-native';
+import { AppRegistry, Text } from 'react-native';
 
-class Greeting extends Component {
+export default class BoldAndBeautiful extends Component {
   render() {
     return (
-      <Text>Hello {this.props.name}!</Text>
+      <Text style={{ fontWeight: 'bold' }}>
+        I am bold <Text style={{ color: 'red' }}> and red</Text>
+      </Text>
     );
   }
 }
 
-export default class LotsOfGreetings extends Component {
-  render() {
-    return (
-      <View style={{ alignItems: 'center' }}>
-        <Greeting name='Rexxar' />
-        <Greeting name='Jaina' />
-        <Greeting name='Valeera' />
-        <Greeting name='Baruquillo' />
-      </View>
-    );
-  }
-}
+// skip this line if using Create React Native App
+AppRegistry.registerComponent('AwesomeProject', () => BoldAndBeautiful);
