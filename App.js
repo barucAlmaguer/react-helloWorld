@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text } from 'react-native';
+import { AppRegistry, Text, View } from 'react-native';
 
 export default class BoldAndBeautiful extends Component {
   render() {
     return (
-      <Text style={{ fontWeight: 'bold' }}>
-        I am bold <Text style={{ color: 'red' }}> and red</Text>
-      </Text>
+      <View>
+        <Text>Top bar</Text>
+        <Text selectable={true} style={{ fontWeight: 'bold' }}>
+          I am bold <Text style={{ color: 'red' }}> and red</Text>
+        </Text>
+      </View>
+
     );
   }
 }
