@@ -22,10 +22,28 @@ class Blink extends Component {
   }
 }
 
+class Counter extends Component {
+  constructor(props){
+    super(props);
+    this.state = {counter: 0}
+    setInterval(()=>{
+      this.setState(previousState => {
+        return { counter: (previousState.counter + 1)}
+      });
+    }, 500);
+  }
+
+  render(){
+    return (<Text>{this.props.text} = {this.state.counter}</Text>
+    );
+  }
+}
+
 export default class BlinkApp extends Component {
   render() {
     return (
-      <View>
+      <View margin={20}>
+        <Counter text='Contando '/>
         <Blink interval={1000} text='I love to blink' />
         <Blink interval={1500} text='Yes blinking is so great' />
         <Blink interval={1750} text='Why did they ever take this out of HTML' />
