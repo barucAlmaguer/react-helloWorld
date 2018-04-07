@@ -11,7 +11,7 @@ export default class OneFlexyBoi extends Component {
           <View style={{ flex: 1, backgroundColor: 'powderblue' }} />
           <View style={{ flex: 2, backgroundColor: 'skyblue' }} />
           <View style={{ flex: 3, backgroundColor: 'steelblue' }}>
-            <Text style={{ margin: 20 }}>Text over blue sky</Text>
+            <Text style={{color:'white'}}>Text over blue sky</Text>
           </View>
         </View>
       </View>
